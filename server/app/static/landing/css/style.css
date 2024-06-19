@@ -1,0 +1,341 @@
+/* Introduction.css */
+
+.introduction-container {
+  display: flex;
+  align-items: center;
+  margin: 0px 120px 0px 120px;
+  height: auto;
+  padding: 145px 0px 145px 0px;
+}
+
+.text-container {
+  max-width: 1400px; /* Adjust max-width for the text container */
+  /*font-size: 55px;*/;
+  font-size: 5.8vmin;
+  line-height: 0.95;
+}
+
+.text-container h1 {
+  color: #191818; /* Customize button text color */
+  font-weight: 900;
+}
+
+.image-container {
+  max-width: 550px; /* Adjust max-width for the image container */
+  text-align: center; /* Center the image within the container */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.8s;
+}
+
+.image-container img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 1300px) {
+
+  .introduction-container {
+      flex-direction: column;
+      padding: 80px 0px 80px 0px;
+  }
+
+  .text-container, .image-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+
+  .introduction-container {
+      padding: 0px 0px 40px 0px;
+  }
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #191818;
+  border-bottom: 2px solid #E6AD4E;
+  border-top: 2px solid #E6AD4E;
+}
+
+.button-bar {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #191818;
+}
+
+.button-bar button {
+  padding: 10px;
+  cursor: pointer;
+  color: #191818; /* Customize button text color */
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 2px;
+  border: none;
+  color: #fff;
+  /*background-color: #D2D2D4;  Customize button background color */
+}
+
+.button-bar button:hover {
+  background-color: #f8b94b;
+
+}
+
+.video-container {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #191818;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container video {
+  width: 100%;
+  max-width: 1000px;
+  height: auto;
+  border: 0px;
+}
+
+.text-line {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.text-line p {
+  font-size: 30px;
+  /*color: #191818;  Text color for the centered text line */
+  color: #fff;
+}
+
+
+.language-selected {
+  background-color: #f5ad31;
+}
+
+.language-not-selected {
+  background-color: #191818;
+}
+
+
+/* Working.css */
+
+.work-container {
+  display: flex;
+  justify-content: center;
+}
+
+.working-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 1500px;
+  max-width: 100%;
+  margin: 00px 70px 10px 70px;
+  background-color: #232D39;
+  border-radius: 30px;
+  border: 2px solid #E6AD4E;
+}
+
+.working-square {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  width: 100%;
+}
+
+.left-content {
+  flex: 2.9;
+}
+
+.right-content {
+  flex: 1;
+  text-align: left;
+}
+
+.right-content p {
+  color: #fff;
+  font-size: 25px;
+}
+
+.right-content h1 {
+  color: #fff;
+  font-size: 55px;
+}
+
+
+.gif {
+  width: 1200px;
+  max-width: 100%; /* Adjust this as needed */
+  height: auto;
+}
+
+
+@media screen and (max-width: 1580px) {
+
+  .working-square{
+      padding: 20px 20px 20px 20px;
+  }
+}
+
+.features{
+  margin: 100px 0px 100px 0px;
+}
+
+/* Features.css */
+
+.features-introduction-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 120px 50px 120px;
+  height: auto;
+  padding: 0px 0px 0px 0px;
+}
+
+.features-text-container {
+  max-width: 1200px; /* Adjust max-width for the text container */
+  /*font-size: 55px;*/;
+}
+
+.features-text-container h2 {
+  color: #191818; /* Customize button text color */
+  font-size: 65px;
+  margin: 0px;
+}
+
+.features-text-container p {
+  color: #191818; /* Customize button text color */
+  font-size: 20px;
+}
+
+.features-image-container {
+  max-width: 180px; /* Adjust max-width for the image container */
+  text-align: center; /* Center the image within the container */
+}
+
+.features-image-container img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.8s;
+}
+
+.features-image-container img:hover {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@media screen and (max-width: 1300px) {
+
+  .features-introduction-container {
+      flex-direction: column;
+      padding: 30px 0px 30px 0px;
+  }
+
+  .features-text-container, .features-image-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  .features-introduction-container {
+      padding: 0px 0px 40px 0px;
+  }
+
+  .features-text-container h2 {
+    font-size: 50px;
+  }
+}
+
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 991px;
+  min-width: 320px;
+  margin: 50px auto;
+  padding: 0 50px;
+  margin-bottom: 120px;
+}
+.accordion h1 {
+  font-size: 52px;
+  text-align: center;
+}
+.accordion-item {
+  margin-top: 16px;
+  border: 1px solid #E6AD4E;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.accordion-item .accordion-item-title {
+  position: relative;
+  margin: 0;
+  display: flex;
+  width: 100%;
+  font-size: 25px;
+  cursor: pointer;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  align-items: center;
+}
+.accordion-item .accordion-item-desc {
+  display: none;
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 300;
+  color: #444;
+  border-top: 1px dashed #ddd;
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
+}
+.accordion-item input[type="checkbox"] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+.accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+  display: block;
+}
+.accordion-item
+  input[type="checkbox"]:checked
+  ~ .accordion-item-title
+  .icon:after {
+  content: "-";
+  font-size: 20px;
+}
+.accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+  content: "+";
+  font-size: 20px;
+}
+.accordion-item:first-child {
+  margin-top: 0;
+}
+.accordion-item .icon {
+  margin-left: 14px;
+}
+
+@media screen and (max-width: 767px) {
+  .accordion {
+      padding: 0 16px;
+  }
+  .accordion h1 {
+      font-size: 22px;
+  }
+}

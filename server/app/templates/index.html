@@ -1,0 +1,137 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+VoiceVoyage.ai
+
+{% endblock %}
+
+
+{% block head %}
+
+<link rel="stylesheet" type= "text/css" href= "{{ url_for('static', filename='landing/css/style.css') }}">
+
+{% endblock %}
+
+
+{% block content %}
+    
+<div class="introduction-container">
+    <div class="text-container">
+      <h1>Ready to unlock your reach to a global audience?</h1>
+    </div>
+    <div class="image-container">
+      <img src="{{ url_for('static', filename='landing/img/mics-bg.png') }}" alt="Introduction" />
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="button-bar">
+        <button id="English" class="language-selected" onclick="handleLanguageClick('English')">English</button>
+        <button id="Hindi" class="language-not-selected" onclick="handleLanguageClick('Hindi')">Hindi</button>
+        <button id="German" class="language-not-selected" onclick="handleLanguageClick('German')">German</button>
+        <button id="French" class="language-not-selected" onclick="handleLanguageClick('French')">French</button>
+        <button id="Spanish" class="language-not-selected" onclick="handleLanguageClick('Spanish')">Spanish</button>
+    </div>
+    <div class="video-container">
+        <!-- Replace 'your_video_url.mp4' with your actual video URL -->
+        <video title="Video" src="{{ url_for('static', filename='landing/img/samplevideo.mp4') }}" controls width="100%" height="700" autoplay muted playsinline loop></video>
+    </div>
+    <div class="text-line">
+        <p>Effortless Dubbing Into Any Language You Desire!</p>
+    </div>
+</div>
+
+<div class="features">
+
+<div class="features-introduction-container">
+  <div class="features-text-container">
+    <h2>Streamlined flow</h2>
+    <p>Simply provide your input and choose the target language to begin. Our service supports a wide range of formats, including YouTube video URLs, video and audio files, and SRT files, ensuring a flexible and efficient experience for all your conversion needs.</p>
+  </div>
+  <div class="features-image-container">
+    <img src="{{ url_for('static', filename='landing/img/streamline.png') }}" alt="Introduction" />
+  </div>
+</div>
+
+<div class="features-introduction-container">
+  <div class="features-text-container">
+    <h2>Accurate Transcription</h2>
+    <p>Our transcription and speaker diarization services utilize advanced deep learning models to ensure high accuracy and time-sensitive processing. These AI-driven techniques are designed to deliver precise transcriptions and accurately identify different speakers.</p>
+  </div>
+  <div class="features-image-container">
+    <img src="{{ url_for('static', filename='landing/img/tts.png') }}" alt="Introduction" />
+  </div>
+</div>
+
+<div class="features-introduction-container">
+  <div class="features-text-container">
+    <h2>Lifelike Voiceovers</h2>
+    <p>Our dubbing services leverage premium voices from Google TTS Service and ElevenLabs, offering an unparalleled experience in any language of your choice. This integration ensures a seamless and high-quality audio output for an immersive multilingual experience.</p>
+  </div>
+  <div class="features-image-container">
+    <img src="{{ url_for('static', filename='landing/img/transc.png') }}" alt="Introduction" />
+  </div>
+</div>
+
+<div class="features-introduction-container">
+  <div class="features-text-container">
+    <h2>Synch all the way</h2>
+    <p>To ensure a seamless viewing experience, audio and lip syncing are meticulously implemented during the finalization process. This step is crucial for matching the pacing and visuals of the original audio or video, thus maintaining the natural flow.</p>
+  </div>
+  <div class="features-image-container">
+    <img src="{{ url_for('static', filename='landing/img/sync.png') }}" alt="Introduction" />
+  </div>
+</div>
+
+</div>
+
+<div class="work-container">
+<div class="working-container">
+  <div class="working-square">
+      <div class="left-content">
+          <img src="{{ url_for('static', filename='landing/img/working.gif') }}" alt="Working Gif" class="gif" />
+      </div>
+      <div class="right-content">
+          <!-- Add your text here -->
+          <h1>Working</h1>
+          <p>1. Transcription <br><br>
+          2. Translation <br><br>
+        3. Verification <br><br>
+      4. TTS Generation <br><br>
+    5. Lip & Audio Synch <br><br>
+  6. Final Audio Generation</p>
+      </div>
+  </div>
+</div>
+</div>
+
+
+  <div class="accordion">
+    <h1>Frequently Asked Questions</h1>
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion1">
+        <label for="accordion1" class="accordion-item-title"><span class="icon"></span>How does VoiceVoyage work??</label>
+        <div class="accordion-item-desc">Using clonedub is simple. Upload your video or audio file or paste in your youtube link and dub your video into more than 20 languages, keeping the original voices and lipsyncing to match the visuals of the original video.</div>
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion2">
+        <label for="accordion2" class="accordion-item-title"><span class="icon"></span>How long does dubbing take?</label>
+        <div class="accordion-item-desc">The speed of dubbing depends mainly on whether you choose to lipsync or not. Without lipsync you can expect videos to finish dubbing in around 50-70% of the runtime of the video. With lipsync you can expect that to be 3-5x the length of video.</div>
+    </div>
+
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion3">
+        <label for="accordion3" class="accordion-item-title"><span class="icon"></span>What languages are supported?</label>
+        <div class="accordion-item-desc">English, Japanese, Chinese, German, Hindi, French, Korean, Portuguese, Italian, Spanish, Indonesia, Dutch, Turkish, Polish, Swedish, Bulgarian, Romanian, Arabic, Czech, Greek, Finnish, Croatian, Malay, Slovak, Danish, Tamil, Ukrainian.</div>
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='landing/js/javascript.js') }}"></script>
+
+
+{% endblock %}

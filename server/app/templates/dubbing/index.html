@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+
+{% block title %}
+
+Dub | VoiceVoyage.ai
+
+{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" type= "text/css" href= "{{ url_for('static', filename='dubbing/css/style.css') }}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+{% endblock %}
+
+{% block content %}
+
+    
+<div class="container">
+
+<div class="carousal-container">
+    <div class="owl-carousel">
+        <div><img src="{{ url_for('static', filename='dubbing/img/upload.png') }}" alt=""></div>
+        <div><img src="{{ url_for('static', filename='dubbing/img/processing.png') }}" alt=""></div>
+        <div><img src="{{ url_for('static', filename='dubbing/img/transcription.png') }}" alt=""></div>
+      <div><img src="{{ url_for('static', filename='dubbing/img/translate.png') }}" alt=""></div>
+        <div><img src="{{ url_for('static', filename='dubbing/img/tts.png') }}" alt=""></div>
+        <div><img src="{{ url_for('static', filename='dubbing/img/sync.png') }}" alt=""></div>
+        <div><img src="{{ url_for('static', filename='dubbing/img/done.png') }}" alt=""></div>
+    </div>
+  </div>
+
+  <hr size="2" width="1100px" style="margin: 30px auto 30px auto; border-top: 1px solid rgb(224, 219, 219);">
+
+<div class="form-container">
+    <div class="flex-container" style="justify-content: center; align-items: center;">
+        <div class="flex-item text-section">
+            <h1>Upload your video, audio, or subtitles file or enter a youtube link to begin dubbing.</h1>
+            <p>Dubbing tasks usually take between 100%-200% of the runtime of the video or audio file.</p>
+        </div>
+
+        <div class="vl"></div>
+
+        <div class="flex-item form-section" style="display: flex;justify-content: center; align-items: center;">
+        <form class="dub-form">
+
+            <!-- There are two dropdowns to show multi-menu support -->
+            <div class="input-container">
+                <input type="text" id="videoURL" name="myInput" placeholder="Enter a video url (e.g. https://www.youtube.com/watch?v=H2vzumn6ZX0)">
+            </div>
+            
+            <p style="display: flex; align-items: center; justify-content: center; margin: 10px 0px auto;">Or</p>
+
+
+            <div class="main-wrapper">
+                <div class="upload-main-wrapper">
+                        <div class="upload-wrapper">
+                                <input type="file" id="upload-file" accept=".mp4,.mp3,.srt">
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid meet" viewBox="224.3881704980842 176.8527621722847 221.13266283524905 178.8472378277154" width="221.13" height="178.85"><defs><path d="M357.38 176.85C386.18 176.85 409.53 204.24 409.53 238.02C409.53 239.29 409.5 240.56 409.42 241.81C430.23 246.95 445.52 264.16 445.52 284.59C445.52 284.59 445.52 284.59 445.52 284.59C445.52 309.08 423.56 328.94 396.47 328.94C384.17 328.94 285.74 328.94 273.44 328.94C246.35 328.94 224.39 309.08 224.39 284.59C224.39 284.59 224.39 284.59 224.39 284.59C224.39 263.24 241.08 245.41 263.31 241.2C265.3 218.05 281.96 199.98 302.22 199.98C306.67 199.98 310.94 200.85 314.93 202.46C324.4 186.96 339.88 176.85 357.38 176.85Z" id="b1aO7LLtdW"></path><path d="M306.46 297.6L339.79 297.6L373.13 297.6L339.79 255.94L306.46 297.6Z" id="c4SXvvMdYD"></path><path d="M350.79 293.05L328.79 293.05L328.79 355.7L350.79 355.7L350.79 293.05Z" id="b11si2zUk"></path></defs><g><g><g><use xlink:href="#b1aO7LLtdW" opacity="1" fill="#ffffff" fill-opacity="1"></use></g><g><g><use xlink:href="#c4SXvvMdYD" opacity="1" fill="#363535" fill-opacity="1"></use></g><g><use xlink:href="#b11si2zUk" opacity="1" fill="#363535" fill-opacity="1"></use></g></g></g></g></svg>
+                                <span class="file-upload-text">Upload File</span>
+                                <div class="file-success-text">
+                                 <svg version="1.1" id="check" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 100 100"  xml:space="preserve">
+                        <circle style="fill:rgba(0,0,0,0);stroke:#ffffff;stroke-width:10;stroke-miterlimit:10;" cx="49.799" cy="49.746" r="44.757"/>
+                        <polyline style="fill:rgba(0,0,0,0);stroke:#ffffff;stroke-width:10;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" points="
+                            27.114,51 41.402,65.288 72.485,34.205 "/>
+                        </svg> <span>Uploaded Successfully</span></div>
+                            </div>
+                            <p id="file-upload-name"></p>
+                </div>
+            </div>
+
+
+            <div class="target-lang-select-container">
+                <div class="target-lang-select">
+                    <input type="text" id="target-lang-input" placeholder="Choose Target Language" onfocus="this.blur();">
+                </div>
+                <div class="target-lang-option-container">
+               <!--     <div class="target-lang-option">
+                        <label> English </label>
+                    </div> -->
+                    <div class="target-lang-option">
+                        <label>Hindi</label>
+                    </div>
+                    <div class="target-lang-option">
+                        <label>German</label>
+                    </div>
+                    <div class="target-lang-option">
+                        <label>French</label>
+                    </div>
+                    <div class="target-lang-option">
+                        <label>Spanish</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="target-voice-select-container">
+                <div class="target-voice-select">
+                    <input type="text" id="target-voice-input" placeholder="Choose Target Voice" onfocus="this.blur();">
+                </div>
+                <div class="target-voice-option-container">
+                    <div class="target-voice-option">
+                        <label>Clone</label>
+                    </div>
+           <!---          <div class="target-voice-option">
+                        <label>Rachel</label>
+                    </div>
+                    <div class="target-voice-option">
+                        <label>Joanne</label>
+                    </div>
+                    <div class="target-voice-option">
+                        <label>Clyde</label>
+                    </div>
+
+                   <div class="target-voice-option">
+                        <label> Natasha </label>
+                    </div>
+                    <div class="target-voice-option">
+                        <label> Alex </label>
+                    </div>
+                    <div class="target-voice-option">
+                        <label> Jack </label>
+                    </div>
+                -->
+                </div>
+            </div>
+
+            <div class="text-container">
+            <button class="button-form-submit button-overlay" type="button" id="form-submition-button" disabled >Submit</button></div>
+
+        </form>
+    </div>
+</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+    <script src="{{ url_for('static', filename='dubbing/js/javascript.js') }}"></script>
+    <script src="{{ url_for('static', filename='dubbing/js/jquery.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,200 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;700;900&family=Poppins&display=swap');
+
+
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  margin: 0px;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 0.92s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 0.92s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+  font-family: 'Archivo', sans-serif;
+  background-color: #D2D2D4;
+}
+
+/* Navbar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px 15px 10px;
+    /*background-color: transparent;  Set background-color to transparent */
+    background-color: #191818;
+    color: #fff;
+    border-bottom: 2px solid #E6AD4E;
+  }
+  
+  .logo img {
+    width: 250px; /* Customize logo width */
+    height: auto;
+    margin: 0px 40px 00px 40px;
+  }
+
+  .buttons a {
+    margin-left: 40px; /* Adjust spacing between buttons */
+    /*background-color: #D2D2D4; /* Customize button background color */
+    background-color: #191818;
+    /*color: #191818;  Customize button text color */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 22px;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: 0.3s;
+   
+    /*add those for opera and mozilla support*/
+    -webkit-text-decoration-color: transparent;
+    -moz-text-decoration-color: transparent;
+
+    text-underline-offset: 8px;
+    text-decoration-thickness: 3px;
+  }
+  
+  a:hover {
+    text-decoration-color: #E6AD4E;
+ 
+    /*add those for opera and mozilla support*/
+    -webkit-text-decoration-color: #E6AD4E;
+    -moz-text-decoration-color: #E6AD4E ;
+  }
+  
+
+  /* Navbar.css */
+
+/* ... (previous styles) */
+
+.logo span {
+  color: #fff;
+    font-size: 32px; /* Customize font size for the logo text */
+    font-weight: bold; /* Customize font weight for the logo text */
+    /*color: #191818;  Customize text color for the logo text */
+  }
+  
+  /* ... (remaining styles) */
+  
+
+.logo span {
+  margin: 0px 50px 00px 50px;
+}
+
+
+@media screen and (max-width: 730px) {
+
+  .logo img {
+    width: 100px; /* Customize logo width */
+  }
+
+  .buttons button{
+    margin-left: 20px; /* Adjust spacing between buttons */
+    font-size: 12px;
+  }
+
+  .logo span {
+      font-size: 20px; /* Customize font size for the logo text */
+      /*color: #191818;  Customize text color for the logo text */
+    }
+}
+
+.class-active-link {
+  padding: 5px;
+  background-color: #E6AD4E;
+}
+
+/* Footer.css */
+
+
+.footer {
+  border-top: 2px solid #E6AD4E;
+  background-color: #191818; /* Set your desired background color */
+  color: white;
+  padding: 15px 50px 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-footer img {
+  width: 250px;
+  margin: 10px 20px 0px 20px;
+}
+
+.right-content {
+  margin: 0px 50px 00px 50px;
+  font-size: 70px;
+}
+
+.right-content div:first-child {
+  /* Style for 'Contact us at' */
+  margin-bottom: 5px;
+}
+
+
+@media screen and (max-width: 630px) {
+
+  .right-content{
+      font-size: 9px;
+  }
+
+  .logo-footer img {
+    width: 150px;
+    margin: 10px 20px 0px 20px;
+    }
+
+
+}

@@ -1,0 +1,509 @@
+
+ /*--------------------------------------------------- Start Target Language Select Customization ---------------------------------------------------*/
+
+ .target-lang-select-container {
+  position: relative;
+  margin: 20px auto;
+  margin-top: 30px;
+  width: 400px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.target-lang-select-container .target-lang-select {
+  position: relative;
+  background: #191818;
+  height: 60px;
+}
+
+.target-lang-select-container .target-lang-select::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%) rotate(45deg);
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  cursor: pointer;
+  transition: border-color 0.4s;
+}
+
+.target-lang-select-container.active .target-lang-select::after {
+  border: none;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.target-lang-select-container .target-lang-select input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+.target-lang-select-container .target-lang-option-container {
+  position: relative;
+  background: #E6AD4E;
+  height: 0;
+  overflow-y: scroll;
+  transition: 0.4s;
+}
+
+.target-lang-select-container.active .target-lang-option-container {
+  height: 240px;
+}
+
+.target-lang-select-container .target-lang-option-container::-webkit-scrollbar {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  width: 10px;
+}
+
+.target-lang-select-container .target-lang-option-container::-webkit-scrollbar-thumb {
+  background: #0f0e11;
+}
+
+.target-lang-select-container .target-lang-option-container .target-lang-option {
+  position: relative;
+  padding-left: 15px;
+  height: 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.target-lang-select-container .target-lang-option-container .target-lang-option.selected {
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.target-lang-select-container .target-lang-option-container .target-lang-option:hover {
+  background: rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+}
+
+.target-lang-select-container .target-lang-option-container .target-lang-option label {
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+}
+
+ /*--------------------------------------------------- End Target Language Select Customization ---------------------------------------------------*/
+
+
+
+ /*--------------------------------------------------- Start Voice Select Customization ---------------------------------------------------*/
+
+ .target-voice-select-container {
+  position: relative;
+  margin: 20px auto;
+  margin-top: 30px;
+  width: 400px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.target-voice-select-container .target-voice-select {
+  position: relative;
+  background: #191818;
+  height: 60px;
+}
+
+.target-voice-select-container .target-voice-select::after {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%) rotate(45deg);
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  cursor: pointer;
+  transition: border-color 0.4s;
+}
+
+.target-voice-select-container.active .target-voice-select::after {
+  border: none;
+  border-left: 2px solid white;
+  border-top: 2px solid white;
+}
+
+.target-voice-select-container .target-voice-select input {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+}
+
+.target-voice-select-container .target-voice-option-container {
+  position: relative;
+  background: #E6AD4E;
+  height: 0;
+  overflow-y: scroll;
+  transition: 0.4s;
+}
+
+.target-voice-select-container.active .target-voice-option-container {
+  height: 240px;
+}
+
+.target-voice-select-container .target-voice-option-container::-webkit-scrollbar {
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  width: 10px;
+}
+
+.target-voice-select-container .target-voice-option-container::-webkit-scrollbar-thumb {
+  background: #0f0e11;
+}
+
+.target-voice-select-container .target-voice-option-container .target-voice-option {
+  position: relative;
+  padding-left: 15px;
+  height: 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.target-voice-select-container .target-voice-option-container .target-voice-option.selected {
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+.target-voice-select-container .target-voice-option-container .target-voice-option:hover {
+  background: rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+}
+
+.target-voice-select-container .target-voice-option-container .target-voice-option label {
+  font-size: 1.1rem;
+  color: white;
+  cursor: pointer;
+}
+
+
+  /*--------------------------------------------------- End Voice Select Customization ---------------------------------------------------*/
+
+
+.input-container {
+  margin: 0px 0px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Aligns items vertically in the center */
+  gap: 10px; /* Space between label and input */
+  width: 100%;
+
+}
+
+.input-container label {
+  font-size: 16px;
+  margin: 0; /* Removes default margin */
+  margin-right: 30px;
+}
+
+textarea, input { outline: none; }
+
+.input-container input {
+  padding: 20px;
+  font-size: 18px;
+  border: 1px solid #b3b2b2;
+  border-radius: 4px;
+  flex-grow: 1; /* Allows input to grow and fill available space */
+  width: 100%;
+  max-width: 600px;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0px;
+}
+
+.button-form-submit {
+  background-color: #E6AD4E;
+  padding: 10px 20px 10px 20px;
+  font-size: 18px;
+  color: #fff;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: 1px solid #dacfba;
+  opacity: 1;
+}
+
+.button-overlay {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none; /* Prevents clicking */
+  cursor: none;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+.main-wrapper {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+.upload-main-wrapper{
+    width: 220px;
+    margin: 0 auto;
+}
+#file-upload-name{
+    margin: 4px 0 0 0;
+    font-size: 12px;
+}
+.upload-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px auto 0;
+    position: relative;
+    cursor: pointer;
+    background-color: #E6AD4E;
+    padding: 8px 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s linear all;
+    color: #ffffff;
+}
+.upload-wrapper input[type="file"] {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+.upload-wrapper > svg {
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+}
+.upload-wrapper.success > svg{
+    transform: translateX(-200px);
+}
+.upload-wrapper.uploaded {
+    transition: 0.2s linear all;
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    text-align: center;
+}
+.upload-wrapper .file-upload-text {
+    position: absolute;
+    left: 80px;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.2s linear all;
+}
+.upload-wrapper.uploaded .file-upload-text {
+    text-indent: -999px;
+    margin: 0;
+}
+.file-success-text {
+    opacity: 0;
+    transition: 0.2s linear all;
+    visibility: hidden;
+    transform: translateX(200px);
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.file-success-text svg {
+    width: 25px;
+    height: auto;
+}
+.file-success-text span{
+   margin-left: 15px;
+}
+.upload-wrapper.success .file-success-text{
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+.upload-wrapper.success.uploaded .file-success-text{
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+.upload-wrapper.success.uploaded .file-success-text span{
+    display: none;
+}
+.upload-wrapper .file-success-text circle{
+	  stroke-dasharray: 380;
+    stroke-dashoffset: 380;
+    transition: 1s linear all;
+    transition-delay: 1.4s;
+}
+.upload-wrapper.success .file-success-text  circle {
+	stroke-dashoffset: 0;
+}
+.upload-wrapper .file-success-text polyline {
+	stroke-dasharray: 380;
+	stroke-dashoffset: 380;
+	transition: 1s linear all;
+	transition-delay: 2s;
+}
+.upload-wrapper.success .file-success-text polyline {
+    stroke-dashoffset: 0;
+}
+.upload-wrapper.success .file-upload-text{
+    -webkit-animation-name: bounceOutLeft;
+    animation-name: bounceOutLeft;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes bounceOutLeft {
+    20% {
+        opacity: 1;
+        -webkit-transform: translate3d(20px, 0, 0);
+        transform: translate3d(20px, 0, 0);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+}
+
+@keyframes bounceOutLeft {
+    20% {
+        opacity: 1;
+        -webkit-transform: translate3d(20px, 0, 0);
+        transform: translate3d(20px, 0, 0);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(-2000px, 0, 0);
+        transform: translate3d(-2000px, 0, 0);
+    }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto 100px auto;
+  width: 100%;
+  max-width: 1400px;
+  border: 2px solid #E6AD4E;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+
+.carousal-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.carousal-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  width: 100%;
+  margin: 0 auto; /* Centering the container */
+  background-color: #fff;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  flex: 1; /* Each child takes equal space */
+  min-width: 300px; /* Adjust for responsiveness */
+}
+
+.text-section {
+  /* Additional styling for text section */
+  padding-bottom: 100px;
+}
+
+.form-section {
+  /* Additional styling for form section */
+}
+
+.text-section h1{
+  width: 90%;
+  font-size: 50px;
+  margin: 0px auto 20px auto;
+}
+
+.text-section p{
+  width: 90%;
+  margin: 0px auto 0px auto;
+}
+
+.owl-carousel {
+  margin-top: 40px;
+  background-color: #fff;
+  height: auto;
+}
+
+.owl-carousel img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.owl-item > div {
+  cursor: pointer;
+  margin: 6% 8%;
+  transition: margin 0.4s ease;
+}
+.owl-item.center > div {
+  cursor: auto;
+  margin: 0;
+}
+
+.owl-item:not(.center) > div {
+  opacity: .50;
+}
+
+.dub-form {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #fff;
+  width: 100%;
+  height: auto;
+}
+
+
+.vl {
+  border-left: 1px solid rgb(224, 219, 219);
+  height: 380px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" type= "text/css" href= "{{ url_for('static', filename='base/css/style.css') }}">
+    {% block head %} {% endblock %}
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+          <img src="{{ url_for('static', filename='base/img/logo.png') }}" alt='VoiceVoyage.ai'></img>
+        </div>
+        <div class="buttons">
+          <a href="{{ url_for('landing.index') }}">Home</a>
+          <a href="{{ url_for('dubbing.index') }}">Dub</a>
+        </div>
+      </div>
+
+    <div class="content">
+        {% block content %} {% endblock %}
+    </div>
+
+    <div container-footer>
+      <footer class="footer">
+      <div class="left-content">
+      <div class="logo-footer">
+          <img src="{{ url_for('static', filename='base/img/logo.png') }}" alt='VoiceVoyage.ai'></img>
+        </div>
+      </div>
+      <div class="right-content" style="text-align: right;">
+        <p style=" font-size: 22px;">Contact us at</p>
+        <p style=" font-size: 22px;">support@voicevoyage.ai</p>
+      </div>
+    </footer>    
+    </div>
+
+</body>
+</html>
