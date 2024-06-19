@@ -166,3 +166,5 @@ server/app/dubbing/scripts/models/
 server/app/dubbing/scripts/wav2lip/wav2lip_gan.pth
 
 server/app/dubbing/scripts/wav2lip/wav2lip.pth
+
+server/models/
